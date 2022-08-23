@@ -1,0 +1,3 @@
+[submodule "SimpleMCISoundPlayer"]
+	path = SimpleMCISoundPlayer
+	url = https://github.com/TikoTako/SimpleMCISoundPlayer.git
