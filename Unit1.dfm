@@ -4,13 +4,14 @@ object MainForm: TMainForm
   BorderStyle = bsSingle
   Caption = 'MainForm'
   ClientHeight = 242
-  ClientWidth = 969
+  ClientWidth = 961
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
   Font.Height = -12
   Font.Name = 'Segoe UI'
   Font.Style = []
+  Position = poDesktopCenter
   OnCreate = FormCreate
   TextHeight = 15
   object FileListBox1: TFileListBox
@@ -56,6 +57,7 @@ object MainForm: TMainForm
     Height = 201
     ItemHeight = 15
     TabOrder = 4
+    OnClick = ListBox1Click
     OnDblClick = ListBox1DblClick
   end
   object AddButton: TButton
@@ -70,20 +72,20 @@ object MainForm: TMainForm
   object PlayButton: TButton
     Left = 631
     Top = 215
-    Width = 138
+    Width = 90
     Height = 23
     Caption = 'Play'
     TabOrder = 6
-    OnClick = PlayButtonClick
+    OnClick = PlayRewindStopButtonClick
   end
   object StopButton: TButton
-    Left = 775
+    Left = 823
     Top = 215
-    Width = 138
+    Width = 90
     Height = 23
     Caption = 'Stop'
     TabOrder = 7
-    OnClick = StopButtonClick
+    OnClick = PlayRewindStopButtonClick
   end
   object RemoveButton: TButton
     Left = 582
@@ -94,16 +96,26 @@ object MainForm: TMainForm
     TabOrder = 8
     OnClick = RemoveButtonClick
   end
-  object TrackBar1: TTrackBar
-    Left = 926
+  object VolumeBar: TTrackBar
+    Left = 918
     Top = 8
     Width = 35
     Height = 201
-    Max = 100
+    Max = 1000
     Orientation = trVertical
     Frequency = 10
+    Position = 800
     TabOrder = 9
-    TickMarks = tmTopLeft
-    OnChange = TrackBar1Change
+    TickMarks = tmBoth
+    OnChange = VolumeBarChange
+  end
+  object RewindButton: TButton
+    Left = 727
+    Top = 215
+    Width = 90
+    Height = 23
+    Caption = 'Rewind'
+    TabOrder = 10
+    OnClick = PlayRewindStopButtonClick
   end
 end

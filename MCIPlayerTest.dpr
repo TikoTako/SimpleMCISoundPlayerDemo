@@ -2,7 +2,8 @@ program MCIPlayerTest;
 
 uses
   Vcl.Forms,
-  Unit1 in 'Unit1.pas' {MainForm};
+  Unit1 in 'Unit1.pas' {MainForm},
+  SimpleMCISoundPlayerUnit in 'SimpleMCISoundPlayer\SimpleMCISoundPlayerUnit.pas';
 
 {$R *.res}
 
